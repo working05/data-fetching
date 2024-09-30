@@ -1,0 +1,35 @@
+.post-detail {
+  background-color: white;
+  width: 65vw;
+  margin: 0;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.post-detail-header {
+  text-align: center;
+  font-size: 4vh;
+  font-weight: 500;
+}
+
+.post-detail-body {
+  font-size: 1.7vh;
+  padding: 12px;
+}
+
+.post-detail-ul {
+  width: auto;
+  list-style: none;
+}
+
+.post-detail-li {
+  font-size: 1.7vh;
+  margin-left: -1vw;
+  margin-right: 1vw;
+  padding: 12px;
+}
+
+.post-detail-li-author {
+  font-size: 2.2vh;
+  font-weight: 450;
+}

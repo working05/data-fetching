@@ -1,0 +1,35 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  margin: 0;
+  gap: 0;
+  overflow-y: scroll;
+}
+
+.post-list-header {
+  text-align: center;
+  font-size: 4vh;
+  font-weight: 500;
+}
+
+.post-list-ul {
+  width: auto;
+  list-style: none;
+}
+
+.post-list-li {
+  font-size: 2vh;
+  margin-left: -1vw;
+  margin-right: 1vw;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.post-list-li.selected {
+  background-color: rgb(231, 231, 231);
+}
+
+.post-list-li:hover {
+  color: rgb(175, 175, 175);
+}

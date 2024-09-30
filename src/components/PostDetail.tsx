@@ -35,7 +35,7 @@ function PostDetail({ state }: postDetailProp) {
     return () => {
       ignore = true;
     };
-  }, [fetchDetails]);
+  }, [fetchDetails, detail]);
 
   return (
     <div className="post-detail">
@@ -47,13 +47,20 @@ function PostDetail({ state }: postDetailProp) {
       </ul>
       <div className="post-detail-header">Comments</div>
       <ul className="post-detail-ul">
-        {detail.comments.map((val) => (
-          <li className="post-detail-li" key={val.id}>
-            <div className="post-detail-li-author">Author: {val.email}</div>
+        {state.selectedPostId === detail.comments[0]?.postId ? (
+          detail.comments.map((val) => (
+            <li className="post-detail-li" key={val.id}>
+              <div className="post-detail-li-author">Author: {val.email}</div>
+              <br />
+              {val.body}
+            </li>
+          ))
+        ) : (
+          <li className="post-detail-li">
+            Loading...
             <br />
-            {val.body}
           </li>
-        ))}
+        )}
       </ul>
     </div>
   );
